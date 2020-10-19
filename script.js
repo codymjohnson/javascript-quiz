@@ -68,8 +68,6 @@ letterB.innerHTML = q.letterB;
 letterC.innerHTML = q.letterC;
 }
 
-// event listener for quiz
-start.addEventListener("click", quiz)
 
 // begin quiz
 function beginQuiz() {
@@ -106,3 +104,38 @@ function checkAnswer(answer) {
     }
 
 }
+
+
+
+// function to see if answer is correct
+function checkAnswer(answer) {
+    if(answer === questions[currentQuestion].correct) {
+        score++;
+        correctAns();
+    } else {
+        wrongAns();
+    }
+    count = 0;
+    if(currentQuestion < finalQuestion) {
+        currentQuestion++;
+        showScore();
+    }
+}
+
+// if correct
+function correctAns() {
+    document.getElementById(currentQuestion).style.backgroundColor = "blue";
+}
+
+// if incorrect
+function wrongAns() {
+    document.getElementById(currentQuestion).style.backgroundColor = "red";
+}
+
+function showScore() {
+    score.style.display = "block";
+}
+
+console.log(beginQuiz)
+
+begin.addEventListener("click", beginQuiz)
