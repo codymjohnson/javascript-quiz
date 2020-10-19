@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    
+</head>
+<body>
+    <div class="header">
+        <header>Beer Quiz</header>
+    </div>
+    <div id="container">
+        <div id="begin">Let's drink up some questions!</div>
+        <div id="quiz" style="display: none;"></div>
+        <div id="question"></div>
+        <div id="options">
+            <div class="letter" id="a" onclick="checkAnswer"></div>
+            <div class="letter" id="b" onclick="verifyCorrect"></div>
+            <div class="letter" id="c" onclick="verifyCorrect"></div>
+        </div>
+        <div id="timer">
+            <div id="counter"></div>
+            <div id="atimeGuage"></div>
+            <div id="timeGuage"></div>
+        </div>
+        <div id="progress"></div>
+        <div id="score" style="display: none"></div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
