@@ -8,24 +8,40 @@ body {
 
 header {
   font-size: 80px;
+  padding-bottom: 5px;
   font-weight: bolder;
-  color: darkblue;
+  color: darkorange;
   text-align: center;
-  background-color: lightslategray;
+  background-color: rgb(78, 82, 87);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+
+
 #container {
   margin: auto;
-  height: 800px;
-  width: 50%;
-  border: 20px solid lightgray;
+  height: 900px;
+  width: 65%;
+  border: 16px solid rgb(78, 82, 87);
   margin-top: 20px;
-  background-color: lightgray;
-  color: darkblue;
+  background-image: url(./thais-do-rio-EUO7L470LXk-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: white;
+}
+
+#question-block {
+  color: white;
+  padding-left: 5px;
 }
 
 #begin {
   text-align: center;
   font-size: 20px;
+}
+
+.col-lg-10 {
+  background-color: black;
+  opacity: 0.75;
 }
