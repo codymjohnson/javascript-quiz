@@ -94,7 +94,7 @@ function showQuestions() {
                 evaluation.style.color = "green";
                 choiceButt.appendChild(document.createElement("hr"));
                 choiceButt.appendChild(evaluation);
-                score += 1;
+                score += 3;
                 setTimeout(nextQuestion, 1000);
             } else {
                 evaluation.textContent = "Newp";
@@ -123,6 +123,55 @@ function nextQuestion() {
 
 // Function for ending quiz and sending user to score page
 function endQuiz() {
+    timeGuage.textContent = "";
+    timeGuage.style.visibility = "hidden";
+    if (quizDone === true) {
+        questions.textContent = "All done, time for another drink!";
+    } else {
+        questions.textContent = "Sucks to suck, time is up";
+    };
 
-}
+    // Show score
+    options.textContent = "You got " + score + " points! Wanna save your score?";
+
+    // Create elements to hold new score and name
+    var hiScore = document.createElement("p");
+    var userName = document.createElement("input");
+    var submitScore = document.createElement("button");
+
+    // Style for high score elements
+    hiScore.style.marginTop = "18px";
+    userName.style.width = "50%";
+    userName.style.marginBottom = "18px";
+    userName.setAttribute("class", "form-control");
+    userName.setAttribute("placeholder", "Enter Name");
+    submitScore.setAttribute("class", "btn btn-warning");
+    submitScore.textContent = "Submit";
+    hiScore.appendChild(userName);
+    hiScore.appendChild(submitScore);
+    options.appendChild(hiScore);
+
+    // run Highscore after score is submitted
+    submitScore.onclick = function addScore() {
+        var scoreList = JSON.parse(localStorage.getItem("allEntries"));
+        if (scoreList === null) {
+            scoreList = [];
+        };
+        var nameList = userName.value;
+        var nameScore = score;
+        var hiScoreList = {
+            User: nameList,
+            Score: nameScore
+        };
+        localStorage.setItem("hiScoreList", JSON.stringify("hiScoreList"));
+
+        // Save score to storage
+        scoreList.push(hiScoreList);
+        localStorage.setItem("")
+
+
+    };
+
+
+};
 
