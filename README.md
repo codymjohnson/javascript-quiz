@@ -1,6 +1,5 @@
 # javascript-quiz
 Beer Quiz
-Badge
 
 ## Table of Contents:
 Deployed site
