@@ -1,34 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Beer Quiz</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
+    <script src="https://kit.fontawesome.com/702f140c67.js" crossorigin="anonymous"></script>
 
-    
+
 </head>
+
 <body>
     <div class="header">
-        <header>Beer Quiz</header>
+        <header><i class="fas fa-beer"></i>Beer Quiz<i class="fas fa-beer"></i></header>
+
+
     </div>
-    <div id="container">
-        <div id="begin">Let's drink up some questions!</div>
-        <div id="quiz" style="display: none;"></div>
-        <div id="question"></div>
-        <div id="options">
-            <div class="letter" id="a" onclick="checkAnswer"></div>
-            <div class="letter" id="b" onclick="verifyCorrect"></div>
-            <div class="letter" id="c" onclick="verifyCorrect"></div>
-        </div>
-        <div id="timer">
-            <div id="counter"></div>
-            <div id="atimeGuage"></div>
-            <div id="timeGuage"></div>
-        </div>
-        <div id="progress"></div>
-        <div id="score" style="display: none"></div>
-    </div>
-    <script src="./script.js"></script>
+    <main id="container">
+        <!-- quiz -->
+        <section class="col-lg-8">
+            <section id="question-block" class="row aligncenter">
+                <h1 id="questions">Let's see how much you know about making beer</h1>
+                <h2 id="options">Answer questions within the time limit!</h2>
+                <button id="begin" type="button" class="btn btn-warning">Let's drink up some questions</button>
+
+            </section>
+            <section id="row">
+                <h3 id="timer"></h3>
+                <h3 id="high-scores-page" type=button></h3>
+
+            </section>
+        </section>
+    </main>
+    <!--  Scripts-->
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="./assets/script.js" type="text/javascript"></script>
+
 </body>
+
 </html>
