@@ -132,7 +132,7 @@ function endQuiz() {
     };
 
     // Show score
-    options.textContent = "You got " + score + " points! Wanna save your score?";
+    options.textContent = "You got " + score + " / 18 points! Wanna save your score?";
 
     // Create elements to hold new score and name
     var hiScore = document.createElement("p");
